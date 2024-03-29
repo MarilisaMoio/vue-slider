@@ -70,7 +70,7 @@ createApp({
             }
         },
         showNext: function(){
-            if (this.imgCounter < this.slides.length){
+            if (this.imgCounter < this.slides.length - 1){
                 this.imgCounter++;
             } else {
                 this.imgCounter = 0;
