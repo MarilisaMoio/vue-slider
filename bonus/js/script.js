@@ -82,7 +82,10 @@ createApp({
         },
         autoPlay: function(){
             this.autoScroll = setInterval(this.showNext, 2000)
-        }
+        },
+        stopAutoPlay: function(){
+            clearInterval(this.autoScroll)
+        },
     },
     mounted(){
         this.autoPlay();
