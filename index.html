@@ -19,12 +19,8 @@
                 <div class="item">
                     <img src="img/01.webp" alt="Spiderman" />
                     <div class="text">
-                        <h3>Spiderman</h3>
+                        <h3></h3>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit
-                            tempore aliquid deleniti aut
-                            veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum
-                            corporis.
                         </p>
                     </div>
                 </div>
@@ -32,7 +28,10 @@
                 <div class="thumbs">
                     <div class="prev" @click="showPrevious"></div>
                     <div class="next" @click="showNext"></div>
-                    <div class="thumb active">
+                    <div class="thumb" :class="{'active': index == imgCounter}" v-for="game, index in slides">
+                        <img :src="game.image" :alt="game.alt">
+                    </div>
+                    <!-- <div class="thumb active">
                         <img src="img/01.webp" alt="Svezia" />
                     </div>
                     <div class="thumb">
@@ -46,7 +45,7 @@
                     </div>
                     <div class="thumb">
                         <img src="img/05.webp" alt="Avengers" />
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
