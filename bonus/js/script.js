@@ -59,6 +59,7 @@ createApp({
                 }
             ],
             imgCounter: 0,
+            autoScroll: null, 
         }
     },
     methods: {
@@ -78,6 +79,12 @@ createApp({
         },
         thisActive: function(index){
             this.imgCounter = index;
+        },
+        autoPlay: function(){
+            this.autoScroll = setInterval(this.showNext, 2000)
         }
+    },
+    mounted(){
+        this.autoPlay();
     } 
 }).mount("#app")
